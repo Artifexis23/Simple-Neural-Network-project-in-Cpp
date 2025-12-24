@@ -181,11 +181,15 @@
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_world.cpp" />
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_world_callbacks.cpp" />
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\rope\b2_rope.cpp" />
+    <ClCompile Include="Agent.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Tool.cpp" />
+    <ClCompile Include="Neural_Network.cpp" />
+    <ClCompile Include="Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tool.h" />
+    <ClInclude Include="Agent.h" />
+    <ClInclude Include="Neural_Network.h" />
+    <ClInclude Include="Tools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

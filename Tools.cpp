@@ -7,11 +7,12 @@
 #include <cmath>
 #include <sstream>
 #include <tuple>
+#include "Tools.h"
 
 using namespace std;
 using namespace sf;
 
-float scale = 30.f;
+float PI = 3.14159265f;
 
 random_device rd;
 mt19937 gen(rd());
@@ -25,30 +26,5 @@ int random(int l, int r)
 float distance(Vector2f a, Vector2f b)
 {
     return sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
-}
-
-Vector2f dirof(Angle angle)
-{
-    return { cos(angle.asRadians()), sin(angle.asRadians()) };
-}
-
-float pix(float meter) 
-{
-    return meter * scale;
-}
-
-float meter(float pix) 
-{
-    return pix / scale;
-}
-
-b2Vec2 abvert(Vector2f vector) 
-{
-    return { meter(vector.x), meter(vector.y) };
-}
-
-Vector2f vert(b2Vec2 vector)
-{
-    return { pix(vector.x), pix(vector.y) };
 }
 

@@ -13,152 +13,167 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Box2d files">
+      <UniqueIdentifier>{3cd0fbe5-5132-48b4-a0dc-ba6f223e845e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_world_callbacks.cpp">
+    <ClCompile Include="Tools.cpp">
       <Filter>Kaynak Dosyaları</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_world_callbacks.cpp">
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_world.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_wheel_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_weld_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_timer.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_time_of_impact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_stack_allocator.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_settings.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\rope\b2_rope.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_revolute_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_pulley_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_prismatic_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_polygon_shape.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_polygon_contact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_polygon_circle_contact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_pulley_joint.cpp">
+      <Filter>Box2d files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_mouse_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_settings.cpp">
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_motor_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_math.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_revolute_joint.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\rope\b2_rope.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_polygon_circle_contact.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_mouse_joint.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_polygon_shape.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_stack_allocator.cpp">
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_island.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_fixture.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_friction_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_gear_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_edge_polygon_contact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_fixture.cpp">
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_edge_shape.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_dynamic_tree.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_draw.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_distance_joint.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_edge_circle_contact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_contact_manager.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_collision.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_collide_edge.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_contact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_collide_circle.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_broad_phase.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_chain_shape.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_circle_shape.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_circle_contact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_body.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_chain_polygon_contact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_block_allocator.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_contact_solver.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_collide_polygon.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_chain_circle_contact.cpp">
-      <Filter>Kaynak Dosyaları</Filter>
+      <Filter>Box2d files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_distance.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_dynamic_tree.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_edge_polygon_contact.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_edge_circle_contact.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_distance_joint.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_island.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_collision.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_draw.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_contact_solver.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_contact_manager.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_collide_edge.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_gear_joint.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_collide_polygon.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_time_of_impact.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_circle_shape.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_circle_contact.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_collide_circle.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_chain_polygon_contact.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_chain_circle_contact.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_chain_shape.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_timer.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\collision\b2_broad_phase.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_body.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\dynamics\b2_contact.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_block_allocator.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Downloads\box2d-2.4.1\box2d-2.4.1\src\common\b2_math.cpp">
+      <Filter>Box2d files</Filter>
+    </ClCompile>
+    <ClCompile Include="Agent.cpp">
       <Filter>Kaynak Dosyaları</Filter>
     </ClCompile>
-    <ClCompile Include="Tool.cpp">
+    <ClCompile Include="Neural_Network.cpp">
       <Filter>Kaynak Dosyaları</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tool.h">
+    <ClInclude Include="Tools.h">
+      <Filter>Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.h">
+      <Filter>Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
+    <ClInclude Include="Neural_Network.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
   </ItemGroup>
