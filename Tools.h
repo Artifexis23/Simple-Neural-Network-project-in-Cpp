@@ -13,6 +13,10 @@ using namespace std;
 using namespace sf;
 
 extern float PI;
+extern float deltatime;
+extern float INF;
+extern RectangleShape goal;
+extern Clock passedtime;
 
 int random(int l, int r);
 

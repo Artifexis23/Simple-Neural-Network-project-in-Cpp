@@ -20,17 +20,17 @@ int main()
 {
     RenderWindow window(VideoMode({ 1920, 1080 }), "Alan");
     window.setFramerateLimit(60);
-    float deltatime = 1.f / 60.f;
     Clock passedtime;
 
-    RectangleShape goal({ 30.f, 40.f });
-    goal.setOrigin({ 15.f, 20.f });
+    RectangleShape goal({ 30.f, 50.f });
+    goal.setOrigin({ 15.f, 25.f });
     goal.setPosition({ 1905.f, (float)random(230, 1080) });
     goal.setFillColor(Color::Red);
+    Vector2f goal_dir = { 0, -1 };
+    float goal_speed = 100.f;
 
     //lines
     VertexArray line(PrimitiveType::Lines, 6);
-    if (1) 
     {
         line[0].position = { 0, 230 };
         line[0].color = Color::White;
@@ -55,20 +55,44 @@ int main()
     {
         window.clear();
         
-        if (60 - passedtime.getElapsedTime().asSeconds() <= 0) 
+        while (optional event = window.pollEvent())
+        {
+            if (event->is<Event::Closed>())
+                window.close();
+
+
+        }
+
+        //movement of population
+        int dead_count = 0;
+        for (Agent& agent : population)
+        {
+            if (agent.dead)
+            {
+                dead_count++;
+                continue;
+            }
+
+            agent.decide();
+            agent.move();
+            agent.adjust_min_dist();
+        }
+
+        //creation of next generation
+        if (60 - passedtime.getElapsedTime().asSeconds() <= 0 or dead_count == 20)
         {
             vector<pair<float, int>>sorted_fitness;
 
-            for (int i = 0; i < population.size(); i++) 
+            for (int i = 0; i < population.size(); i++)
             {
-                float fitness = population[i].get_min_dist();
+                float fitness = population[i].get_min_dist() + population[i].get_min_dist_time();
                 sorted_fitness.push_back({ fitness, i });
             }
             sort(sorted_fitness.begin(), sorted_fitness.end());
             reverse(sorted_fitness.begin(), sorted_fitness.end());
 
             vector<Agent> chance;
-            for (int i = 0; i < 20; i++) 
+            for (int i = 0; i < 20; i++)
             {
                 int number = i + 1;
                 while (number--)
@@ -82,25 +106,26 @@ int main()
             next_generation.push_back(population[sorted_fitness[19].second]);
 
             int needed_children = 18;
-            while (needed_children--) 
+            while (needed_children--)
             {
                 Agent child(chance[random(0, 209)], chance[random(0, 209)]);
                 next_generation.push_back(child);
             }
 
             population = next_generation;
+            passedtime.restart();
         }
-        
-        while (optional event = window.pollEvent())
+
+        //movement of goal
         {
-            if (event->is<Event::Closed>())
-                window.close();
+            if (goal.getPosition().y < 255 or goal.getPosition().y > 1065)
+                goal_dir = -goal_dir;
 
-
+            Vector2f goal_new_pos = goal.getPosition() + goal_speed * goal_dir * deltatime;
+            goal.setPosition(goal_new_pos);
         }
 
-        //time
-        if (1) 
+        //timer
         {
             stringstream time;
             time << "00:" << (int)(60 - passedtime.getElapsedTime().asSeconds()) << "\n";
@@ -110,9 +135,11 @@ int main()
             window.draw(leftime);
         }
 
-        for (int i = 0; i < population.size(); i++) 
+        //drawing
+        for (Agent agent : population) 
         {
-            population[i].draw(window);
+            if (not agent.dead)
+                agent.draw(window);
         }
         window.draw(goal);
         window.draw(line);

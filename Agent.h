@@ -8,29 +8,39 @@ using namespace sf;
 
 class Agent
 {
+private:
+
+	Vector2f pos, dir;
+	float min_dist, min_dist_time;
+	CircleShape body;
+	Neural_Network brain;
+	static constexpr float speed = 40.f, radius = 10.f;
+	VertexArray nose;
+	Clock passed_time;
+
 public:
+
+	bool dead;
 
 	Agent();
 
 	Agent(Agent& parent1, Agent& parent2);
 
-	void draw(RenderWindow& window);
+	void decide();
+
+	void move();
+
+	void adjust_min_dist();
+
+	float cur_dist();
 
 	float get_min_dist();
 
 	Vector2f get_position();
 
-	bool did_finish();
+	float get_min_dist_time();
 
-private:
-
-	Vector2f position, direction;
-	float min_dist;
-	bool finished;
-	CircleShape body;
-	Neural_Network brain;
-	static constexpr float speed = 40.f, radius = 10.f;
-	VertexArray nose;
+	void draw(RenderWindow& window);
 
 };
 

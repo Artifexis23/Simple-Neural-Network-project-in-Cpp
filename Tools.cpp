@@ -13,6 +13,10 @@ using namespace std;
 using namespace sf;
 
 float PI = 3.14159265f;
+float deltatime = 1.f / 60.f;
+float INF = INT_MAX;
+RectangleShape goal;
+Clock passedtime;
 
 random_device rd;
 mt19937 gen(rd());
