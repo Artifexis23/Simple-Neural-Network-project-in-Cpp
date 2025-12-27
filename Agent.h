@@ -26,13 +26,13 @@ public:
 
 	Agent(Agent& parent1, Agent& parent2);
 
-	void decide();
+	void decide(RectangleShape& const goal);
 
-	void move();
+	void move(RectangleShape goal);
 
-	void adjust_min_dist();
+	void adjust_min_dist(RectangleShape& const goal);
 
-	float cur_dist();
+	float cur_dist(RectangleShape& const goal);
 
 	float get_min_dist();
 

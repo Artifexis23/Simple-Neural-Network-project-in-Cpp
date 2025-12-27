@@ -20,7 +20,8 @@ int main()
 {
     RenderWindow window(VideoMode({ 1920, 1080 }), "Alan");
     window.setFramerateLimit(60);
-    Clock passedtime;
+    float best_fitness = INF;
+    int generation_count = 0;
 
     RectangleShape goal({ 30.f, 50.f });
     goal.setOrigin({ 15.f, 25.f });
@@ -73,14 +74,15 @@ int main()
                 continue;
             }
 
-            agent.decide();
-            agent.move();
-            agent.adjust_min_dist();
+            agent.decide(goal);
+            agent.move(goal);
+            agent.adjust_min_dist(goal);
         }
 
         //creation of next generation
         if (60 - passedtime.getElapsedTime().asSeconds() <= 0 or dead_count == 20)
         {
+            generation_count++;
             vector<pair<float, int>>sorted_fitness;
 
             for (int i = 0; i < population.size(); i++)
@@ -90,6 +92,7 @@ int main()
             }
             sort(sorted_fitness.begin(), sorted_fitness.end());
             reverse(sorted_fitness.begin(), sorted_fitness.end());
+            best_fitness = min(best_fitness, sorted_fitness[19].first);
 
             vector<Agent> chance;
             for (int i = 0; i < 20; i++)
@@ -112,6 +115,7 @@ int main()
                 next_generation.push_back(child);
             }
 
+            
             population = next_generation;
             passedtime.restart();
         }
@@ -133,6 +137,17 @@ int main()
             leftime.setPosition({ 700, 0 });
             leftime.setFillColor(Color::White);
             window.draw(leftime);
+        }
+
+        //statistics
+        {
+            stringstream statistics;
+            statistics << "Generation: " << generation_count << "\n";
+            statistics << "Best fitness: " << best_fitness << "\n";
+            Text stats(font, statistics.str(), 24);
+            stats.setPosition({ 1250, 10 });
+            stats.setFillColor(Color::White);
+            window.draw(stats);
         }
 
         //drawing
