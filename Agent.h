@@ -24,19 +24,23 @@ public:
 
 	Agent();
 
+	Agent(Neural_Network parent_brain);
+
 	Agent(Agent& parent1, Agent& parent2);
 
-	void decide(RectangleShape& const goal);
+	void decide(const RectangleShape& goal);
 
-	void move(RectangleShape goal);
+	void move();
 
-	void adjust_min_dist(RectangleShape& const goal);
+	void adjust_min_dist(const RectangleShape& goal);
 
-	float cur_dist(RectangleShape& const goal);
+	float cur_dist(const RectangleShape& goal);
 
 	float get_min_dist();
 
 	Vector2f get_position();
+
+	Neural_Network get_brain();
 
 	float get_min_dist_time();
 

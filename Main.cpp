@@ -75,7 +75,7 @@ int main()
             }
 
             agent.decide(goal);
-            agent.move(goal);
+            agent.move();
             agent.adjust_min_dist(goal);
         }
 
@@ -105,8 +105,8 @@ int main()
             }
 
             vector<Agent> next_generation;
-            next_generation.push_back(population[sorted_fitness[18].second]);
-            next_generation.push_back(population[sorted_fitness[19].second]);
+            next_generation.push_back(Agent (population[sorted_fitness[18].second].get_brain()));
+            next_generation.push_back(Agent (population[sorted_fitness[19].second].get_brain()));
 
             int needed_children = 18;
             while (needed_children--)

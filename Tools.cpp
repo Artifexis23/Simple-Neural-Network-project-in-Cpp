@@ -43,12 +43,7 @@ Vector2f normalize(Vector2f vector, Vector2f prev_vector)
     return vector / sqrt(vector.x * vector.x + vector.y * vector.y);
 }
 
-float sigmoid(float x) 
-{
-    return 1 / (1 + exp(-x));
-}
-
 float xavier(int prev_nodes, int nodes) 
 {
-    return sqrt(6) / sqrt(prev_nodes + nodes);
+    return sqrt(6.f) / sqrt((float) (prev_nodes + nodes));
 }

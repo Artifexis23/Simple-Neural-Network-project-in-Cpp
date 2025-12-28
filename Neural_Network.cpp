@@ -13,6 +13,7 @@ Neural_Network::Neural_Network()
 				int prev_nodes = layer.weights.size();
 				int nodes = layer.weights[from].size();
 				layer.weights[from][to] = random(-xavier(prev_nodes, nodes), xavier(prev_nodes, nodes));
+				//cout << layer.weights[from][to] << endl;
 			}
 		}
 	}
@@ -70,7 +71,8 @@ vector<float> Neural_Network::process_layer(vector<float> input, Layer layer)
 			value[node] += input[prev_node] * layer.weights[prev_node][node];
 		}
 		value[node] += layer.biases[node];
-		value[node] = sigmoid(value[node]);
+		value[node] = tanh(value[node]);
 	}
+
 	return value;
 }
